@@ -1,0 +1,31 @@
+#header-background {
+    width: var(--question-width);
+    height: var(--header-height);
+    margin: var(--header-margin) auto 0px;
+    background-color: black;
+    border-left: 24px solid var(--azul-secd);
+    border-right: 24px solid var(--azul-secd);
+    display: flex;
+}
+.header_icon {
+    height: calc(100% - 10px);
+    margin: 5px 2px;
+}
+.header_icon:first-of-type {
+    margin-left: 20px;
+}
+.header_icon:last-of-type {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+#header-puntaje {
+    display: table;
+    color: white;
+    font: 24px Roboto;
+    font-weight: bold;
+    padding: 10px;
+    margin: -71px auto 8px;
+    background-color: var(--verde-ppal);
+    border-top: var(--header-margin) solid var(--verde-secd);
+}

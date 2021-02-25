@@ -1,0 +1,97 @@
+#question {
+    width: var(--question-width);
+    margin: 0px auto;
+}
+#question-statement {
+    position: relative;
+    color: var(--azul-secd);
+    width: 100%;
+    padding: 20px 60px;
+    margin: 0px auto;
+    background-color: white;
+    border-left: 24px solid var(--verde-ppal);
+    border-right: 24px solid var(--azul-secd);
+}
+#question-statement:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    left: -58px;
+    transform: rotate(30deg);
+    background-color: var(--azul-secd);
+}
+#question-statement-title {
+    position: relative;
+    font: 36px Roboto;
+    font-weight: bold;
+}
+#question-statement-subtitle {
+    font: 16px Roboto;
+    font-style: italic;
+    font-weight: bold;
+    border-top: 2px solid var(--verde-ppal);
+    padding-top: 2px;
+    margin: 16px 0px;
+}
+#question-statement-content {
+    font: 18px Roboto;
+    text-align: justify;
+}
+#question-statement-icon {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    top: 30px;
+    left: -120px;
+    border-radius: 50%;
+    background-color: white;
+    background-image: url(../../assets/vectores/VECT_ICON_NOTICIA_01.svg);
+}
+
+#question-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 28px 0px;
+}
+#question-buttons *:hover {
+    cursor: pointer;
+}
+#arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-right: 15px solid var(--rojo-secd);
+}
+#label-left {
+    color: var(--rojo-secd);
+    background-color: white;
+    font: 28px Roboto;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 0px;
+    width: 170px;
+    border-left: 8px solid var(--rojo-secd);
+    border-right: 2px solid var(--azul-secd);
+}
+#label-right {
+    color: var(--verde-ppal);
+    background-color: white;
+    font: 28px Roboto;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 0px;
+    width: 170px;
+    border-left: 2px solid var(--azul-secd);
+    border-right: 8px solid var(--verde-ppal);
+}
+#arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-left: 15px solid var(--verde-ppal);
+}

@@ -1,0 +1,122 @@
+#feedback {
+    width: var(--feedback-width);
+    margin: 50px auto 0px;
+}
+
+#tip {
+    width: 100%;
+    display: flex;
+}
+#tip-icon {
+    background-color: var(--verde-secd);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tip-icon {
+    width: 100%;
+    padding: 15px;
+}
+#tip-content {
+    background-color: var(--verde-ppal);
+    width: 100%;
+    color: white;
+    padding: 20px 25px 5px;
+    font: 16px Roboto;
+    text-align: justify;
+}
+.tip-content-title {
+    font: 42px Roboto;
+    font-weight: bold;
+}
+
+.points {
+    width: 75%;
+    margin: 0px auto;
+    background-color: white;
+    background-image: url(../../assets/vectores/VECT_FONDO_FEEDBACK.svg);
+    background-repeat:  no-repeat;
+    background-size: 85%;
+    background-position: top center;
+    color: var(--azul-secd);
+    font: 48px Roboto;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+    position: relative;
+}
+.tip-points-img {
+    width: 45%;
+    display: block;
+    margin: 0px auto 20px;
+}
+.tip-points-action {
+    display: table;
+    background-color: var(--verde-ppal);
+    color: white;
+    font: 30px Roboto;
+    font-weight: bold;
+    border-bottom: 6px solid var(--verde-secd);
+    padding: 8px 12px 0px;
+    margin: 20px auto 0px;
+}
+.tip-points-action:hover {
+    cursor: pointer;
+}
+#floating-result {
+    position: absolute;
+    color: white;
+    font: 48px Bungee;
+    font-weight: bold;
+    top: 0;
+    transform: translate(-100%, 0);
+    width: calc((100vw - 75%)/2);
+    padding: 50px;
+    text-transform: uppercase;
+}
+.correcto {
+    background-color: var(--aqua-secd);
+}
+.incorrecto {
+    background-color: var(--rojo-secd);
+}
+
+.end-points {
+    border-left: 20px solid var(--verde-ppal);
+    border-right: 20px solid var(--verde-ppal);
+    padding: 30px 0px 0px;
+    font: 32px Roboto;
+    font-weight: bold;
+}
+.final-points {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--rojo-secd);
+    font: 85px Roboto;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+.end-points-img {
+    width: 20%;
+}
+#end-left-arrow {
+    width: 0; 
+    height: 0; 
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-right: 60px solid var(--verde-ppal);
+    position: absolute;
+    left: -75px;
+}
+#end-right-arrow {
+    width: 0; 
+    height: 0; 
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-left: 60px solid var(--verde-ppal);
+    position: absolute;
+    right: -75px;
+}

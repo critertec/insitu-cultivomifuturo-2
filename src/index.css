@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --header-height: 55px;
+  --header-margin: 16px;
+  --question-width: 50%;
+  --feedback-width: 50%;
+
+  --verde-ppal: #80ae3c;
+  --verde-secd: #4b7312;
+  --azul-psjes: #24244e;
+  --cafe-secd: #4b0f13;
+  --rojo-secd: #e6333e;
+  --cyan-secd: #3bc7ed;
+  --aqua-secd: #2cbdbd;
+  --azul-secd: #121c33;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Bungee';
+  src: local('Bungee'), url(./assets/fuentes/Bungee-Regular.otf) format('opentype');
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--azul-secd);
 }

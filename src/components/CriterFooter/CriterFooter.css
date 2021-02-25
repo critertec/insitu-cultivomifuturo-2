@@ -1,0 +1,56 @@
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.bg_personaje {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    width: 25%;
+}
+#luisa_atras {
+    background-image: url(../../assets/personajes/LUISA_1.png);
+    left: 0;
+    padding-bottom: calc(25% * 636 / 470);
+}
+#yeiner_atras {
+    background-image: url(../../assets/personajes/YEINER_1.png);
+    right: 0;
+    padding-bottom: calc(25% * 754 / 597);
+}
+#lilia_frente {
+    background-image: url(../../assets/personajes/LILIA_1.png);
+    right: 0;
+    width: 30%;
+    padding-bottom: calc(30% * 713 / 649);
+}
+#luisa_frente {
+    background-image: url(../../assets/personajes/LUISA_2.png);
+    left: 0;
+    width: 30%;
+    padding-bottom: calc(30% * 725 / 604);
+}
+#yeiner_frente {
+    background-image: url(../../assets/personajes/YEINER_2.png);
+    right: 0;
+    width: 30%;
+    padding-bottom: calc(30% * 721 / 615);
+}
+
+#footer_correcto {
+    background-image: url(../../assets/vectores/VECT_FONDO_CORRECTO_PC.svg);
+    width: 100%;
+    padding-bottom: calc(100% * 250 / 1380);
+}
+#footer_incorrecto {
+    background-image: url(../../assets/vectores/VECT_FONDO_INCORRECTO_PC.svg);
+    width: 100%;
+    padding-bottom: calc(100% * 250 / 1380);
+}
+#footer_final {
+    background-image: url(../../assets/vectores/VECT_FONDO_ENDGAME_PC.svg);
+    width: 100%;
+    padding-bottom: calc(100% * 250 / 1380);
+}
