@@ -7,7 +7,16 @@ import CriterFooter from '../CriterFooter/CriterFooter';
 
 import { noticias, feedback } from './RepoNoticias';
 
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array
+}
+
 function CriterInsitu2() {
+    const [listaNoticias, setListaNoticias] = useState([]);
     const [estado, setEstado] = useState({});
     const [pregunta, setPregunta] = useState({});
 
@@ -39,20 +48,21 @@ function CriterInsitu2() {
     }
     const continuar = () => {
         let escena = 'pregunta';
-        if (estado.intentos === 0 || noticias.length === 0){
+        if (estado.intentos === 0 || listaNoticias.length === 0){
             escena = 'feedback_final';
-            let feedback_final = feedback[parseInt(estado.puntaje/100)];
+            let feedback_final = feedback[parseInt(estado.puntaje/135)];
             setEstado({...estado, escena: escena, feedback_final: feedback_final});
         } else {
             escena = 'pregunta';
             setEstado({...estado, escena: escena});
-            setPregunta(noticias.pop());
+            setPregunta(listaNoticias.slice(-1)[0]);
+            setListaNoticias(listaNoticias.slice(0,-1));
         }
     }
     const iniciar = () => {
-        let noticiasList = noticias;
-        noticiasList = noticiasList.sort(() => Math.random() - 0.5);
+        const shuffledNews = shuffle([...noticias]);
 
+        setListaNoticias( shuffledNews.slice(0,-1) );
         setEstado({
             escena: 'pregunta',
             intentos: 3,
@@ -60,12 +70,12 @@ function CriterInsitu2() {
             multiplicador: 1,
             racha: 0
         });
-        setPregunta(noticiasList.pop());
+        setPregunta( shuffledNews.slice(-1)[0] );
     }
 
     useEffect(() => {
         iniciar();
-    }, [])
+    }, []);
 
     return (
         <>
