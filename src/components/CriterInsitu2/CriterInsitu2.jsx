@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
+import CriterIntro from '../CriterIntro/CriterIntro';
 import CriterHeader from '../CriterHeader/CriterHeader';
 import CriterQuestion from '../CriterQuestion/CriterQuestion';
 import CriterFeedback from '../CriterFeedback/CriterFeedback';
@@ -17,7 +18,7 @@ function shuffle(array) {
 
 function CriterInsitu2() {
     const [listaNoticias, setListaNoticias] = useState([]);
-    const [estado, setEstado] = useState({});
+    const [estado, setEstado] = useState({escena: 'introduccion'});
     const [pregunta, setPregunta] = useState({});
 
     const contestar = (event) => {
@@ -73,10 +74,6 @@ function CriterInsitu2() {
         setPregunta( shuffledNews.slice(-1)[0] );
     }
 
-    useEffect(() => {
-        iniciar();
-    }, []);
-
     return (
         <>
             <CriterHeader estado={estado} />
@@ -85,6 +82,7 @@ function CriterInsitu2() {
                 ? <CriterQuestion pregunta={pregunta} contestar={contestar} />
                 : <CriterFeedback estado={estado} pregunta={pregunta} continuar={continuar} reiniciar={iniciar} />
             }
+            {estado.escena === 'introduccion' && <CriterIntro iniciar={iniciar} />}
         </>
     );
 }

@@ -9,7 +9,7 @@ function CriterQuestion({
             <div id="question-statement">
                 <div id="question-statement-title">{titulo}</div>
                 <div id="question-statement-subtitle">{subtitulo}</div>
-                <div id="question-statement-content">{contenido}</div>
+                <div id="question-statement-content" dangerouslySetInnerHTML={{__html: contenido}}></div>
                 <div id="question-statement-icon"></div>
             </div>
             <div id="question-buttons" onClick={contestar}>
