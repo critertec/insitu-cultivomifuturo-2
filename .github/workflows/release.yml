@@ -1,8 +1,10 @@
-name: Deployment
-on:
+name: Release
+
+on: 
   push:
-    branches:
-      - master
+    tags:
+    - '*'
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -26,5 +28,11 @@ jobs:
     - name: Build
       run: CI= npm run build
 
-    - name: Package
+    - name: Build package
       run: CI= npm run package-scorm
+
+    - name: Release package
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "scorm_packages/*.zip"
+        token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
