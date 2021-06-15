@@ -27,7 +27,7 @@ function CriterFeedback({
                     </div>
                     <div id="tip-content">
                         <div className="tip-content-title">Tip/Feedback:</div>
-                        <p>{feedback[respuesta]}</p>
+                        <p dangerouslySetInnerHTML={{__html: feedback[respuesta]}}></p>
                     </div>
                 </div>
                 <div className="points">
