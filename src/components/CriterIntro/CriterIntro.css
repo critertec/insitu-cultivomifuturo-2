@@ -22,7 +22,7 @@
 }
 
 h1 {
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     color: var(--verde-ppal);
     font: 42px Roboto;
     font-weight: bold;
@@ -30,8 +30,9 @@ h1 {
 h2 {
     margin-top: 0px;
     color: var(--cafe-secd);
-    font: 24px Roboto;
-    font-style: italic;
+    font: 30px Roboto;
+    font-weight: bold;
+    font-style: normal;
 }
 
 img {
@@ -47,7 +48,7 @@ img {
     top: 10px;
     right: 25px;
     color: var(--verde-ppal);
-    font: 35px Roboto;
+    font: 50px Roboto;
 }
 #exit:hover {
     cursor: pointer;
